@@ -34,6 +34,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.bugstrakerapp.R
+import com.example.bugstrakerapp.model.client.BugsListClient
 import com.example.bugstrakerapp.ui.theme.BugsTrakerAppTheme
 import com.example.bugstrakerapp.ui.theme.padding
 
