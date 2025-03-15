@@ -3,6 +3,7 @@ package com.example.bugstrakerapp.model.client
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 abstract class BaseClient<T>() {
@@ -16,7 +17,7 @@ abstract class BaseClient<T>() {
         logging: Boolean = true,
         interceptors: List<Interceptor> = emptyList(),
 
-    ): T {
+        ): T {
         val builder = OkHttpClient.Builder()
             .connectTimeout(connectTimeoutInMillis, TimeUnit.MILLISECONDS)
             .readTimeout(readTimeoutInMillis, TimeUnit.MILLISECONDS)
@@ -31,8 +32,7 @@ abstract class BaseClient<T>() {
         val httpClient = builder.build()
 
         val retrofit = Retrofit.Builder()
-//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-//            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(baseUrl)
             .client(httpClient)
             .build()

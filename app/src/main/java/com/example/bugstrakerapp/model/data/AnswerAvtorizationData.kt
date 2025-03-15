@@ -1,11 +1,11 @@
 package com.example.bugstrakerapp.model.data
 
 data class AvtorizationData(
-    val status:String,
-    val message:String,
-    val data:Data?
+    val status: String,
+    val message: String,
+    val data: Data?
 )
 
 data class Data(
-    val token:String
+    val token: String
 )
