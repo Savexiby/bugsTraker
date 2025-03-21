@@ -56,7 +56,7 @@ fun BugsList()
                     items(11) {
                         ItemList(
                             title = "Заголовок",
-                            text = "Долбоебы вы",
+                            text = "Какой-то текст",
                             date = "Ноябрь 13.2025",
                             type = "Android * bug",
                         )
