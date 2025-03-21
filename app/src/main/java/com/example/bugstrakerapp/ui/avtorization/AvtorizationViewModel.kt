@@ -24,7 +24,7 @@ class AvtorizationViewModel : ViewModel() {
 
         try {
             val avtorization = KaurcevClient().getClient()
-                .avtorization(LoginPasswordJson(login = login, password = password))
+                .avtorization(LoginPasswordJson(username = login, password = password))
             if (avtorization.data != null) {
                 manegerDataStore.tokenSet(avtorization.data.token)
                 Log.e("avt", "Токен ${avtorization.data.token}")
