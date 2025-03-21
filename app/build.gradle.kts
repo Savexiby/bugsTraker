@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
     implementation(libs.androidx.compose.bom.v20250101)
     implementation(libs.material3)
 
